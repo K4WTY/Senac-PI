@@ -182,3 +182,34 @@
         display: none;
     }
 }
+
+@media (max-width: 1600px) {
+    .box-2 {
+        width: 200px;
+        height: 200px;
+    }
+    .brainstorm {
+        height: 600px !important;
+    }
+    .wireframe {
+        height: 600px !important;
+    }
+    .login, .cadastro, .paginicial {
+        height: 400px !important;
+    }
+    .vscodeVisual {
+        height: 540px !important;
+    }
+}
+
+@media (max-width: 1366px) {
+    .brainstorm {
+        height: 500px !important;
+    }
+    .wireframe {
+        height: 500px !important;
+    }
+    .vscodeVisual {
+        height: 450px !important;
+    }
+}
