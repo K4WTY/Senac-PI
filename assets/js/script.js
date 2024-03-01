@@ -6,6 +6,8 @@ const botaoFrente = document.getElementById('btn-two')
 const indice = document.getElementById('indice')
 const mainContent = document.getElementById('mainContent')
 const alterarImg = document.getElementById('alterarImg')
+const segundaDiv = document.getElementById('segundaDiv')
+const finalDiv = document.getElementById('final')
 
 let page = 1
 let backupContent = null
@@ -29,12 +31,18 @@ function changeMainContent(content) {
     backupContent = content
 }
 
+function final() {
+    segundaDiv.classList.add('d-none')
+    finalDiv.classList.remove('d-none')
+    finalDiv.classList.add('d-flex')
+}
+
 function checkPage(numberPage) {
     if (numberPage == 1) {
         changeContent('Início do projeto', 'O que desenvolmemos?', 'O projeto foi criado para a área do aluno com o intuito de facilitar as necessidades básicas. A ideia do projeto foi desenvolvida pelos instrutores Marcelo Garcia e Bruno Wuo.')
         changeMainContent('primeiroConteudo')
     } else if (numberPage == 2) {
-        changeContent('Montagem da equipe', 'Como foi desenvolvido?', 'Para realizar o desenvolvimento do projeto foi necessário a criação de uma equipe que fosse capaz de concluir cada etapa, como, por exemplo, brainstorm, criar o esqueleto do site, protótipo, entre outras etapas...<br>Sabendo disso, a sala se reuniu e criou a equipe Seed Devs.')
+        changeContent('Montagem da equipe', 'Como foi desenvolvido?', 'Para realizar o desenvolvimento do projeto foi necessária a criação de uma equipe que fosse capaz de concluir cada etapa, como, por exemplo, brainstorm, criar o esqueleto do site, protótipo, entre outras etapas...<br>Sabendo disso, a sala se reuniu e criou a equipe Seed Devs.')
         changeMainContent('segundoConteudo')
     } else if (numberPage == 3) {
         changeContent('O começo', 'Brainstorm', 'Brainstorm é uma técnica que consiste em reunir duas ou mais pessoas com o objetivo de gerar novas ideias ou para debater sobre soluções.')
@@ -48,6 +56,11 @@ function checkPage(numberPage) {
     } else if (numberPage == 6) {
         changeContent('Desenvolvimento', 'Mão na massa', 'Após as estruturas estabelecidas iniciou-se a etapa de transformar a ideia em algo funcional.<br>E para isso foi utilizada algumas tecnologias, como, HTML, CSS, JS, PHP e MySQL.<br><br>HTML: Linguagem de marcação.<br>CSS: Linguagem de estilização.<br>JS: Linguagem de programação.<br>PHP: Linguagem de programação.<br>MySQL: Gerenciamento de banco de dados.')
         changeMainContent('sextoConteudo')
+    } else if (numberPage == 7) {
+        changeContent('Conclusão', 'Fim do projeto', 'Foram necessários 9 meses de produção para concluir o projeto, foi um desafio e tanto, mas cada etapa foi incrível e com certeza sentiremos falta desse ambiente.')
+        changeMainContent('setimoConteudo')
+    } else if (numberPage == 8) {
+        final()
     }
 }
 
@@ -68,7 +81,7 @@ botaoTras.addEventListener('click', function() {
 })
 
 botaoFrente.addEventListener('click', function() {
-    if (page >= 1 && page < 6) {
+    if (page >= 1 && page < 8) {
         page++
         checkPage(page)
         indice.innerHTML = page
