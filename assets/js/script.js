@@ -51,7 +51,7 @@ function checkPage(numberPage) {
         changeContent('Esqueleto do site', 'Wireframe', 'Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.<br>Ao lado está o wireframe do site na versão mobile.')
         changeMainContent('quartoConteudo')
     } else if (numberPage == 5) {
-        changeContent('Figma', 'Prototipação', 'Diferente do Wireframe, na prototipagem vamos criar o visual do site com as paletas de cores e definir os trajetos de cada botão.<br>As imagens ao lado ilustra a prototipagem de algumas telas.')
+        changeContent('Figma', 'Prototipação', 'Diferente do Wireframe, na prototipagem vamos criar o visual do site com as paletas de cores e definir os trajetos de cada botão.<br>As imagens ao lado ilustram a prototipagem de algumas telas.')
         changeMainContent('quintoConteudo')
     } else if (numberPage == 6) {
         changeContent('Desenvolvimento', 'Mão na massa', 'Após as estruturas estabelecidas iniciou-se a etapa de transformar a ideia em algo funcional.<br>E para isso foi utilizada algumas tecnologias, como, HTML, CSS, JS, PHP e MySQL.<br><br>HTML: Linguagem de marcação.<br>CSS: Linguagem de estilização.<br>JS: Linguagem de programação.<br>PHP: Linguagem de programação.<br>MySQL: Gerenciamento de banco de dados.')
